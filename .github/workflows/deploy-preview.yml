@@ -9,7 +9,6 @@ on:
 jobs:
   build_and_preview:
     runs-on: ubuntu-latest
-    needs: unit_test
     outputs:
       url: ${{ steps.firebase_hosting_preview.outputs.details_url }}
     steps:
