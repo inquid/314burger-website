@@ -26,7 +26,7 @@ jobs:
         with:
           repoToken: "${{ secrets.GITHUB_TOKEN }}"
           firebaseServiceAccount: "${{ env.FIREBASE_SERVICE_ACCOUNT }}"
-          projectId: beautybox-295705
+          projectId: burger-2a64c
           channelId: live
         env:
           FIREBASE_CLI_PREVIEWS: hostingchannels
