@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>My awesome food store</title>
+    <title>3.14 Burger</title>
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
     <link rel="stylesheet" href="./css/style.css">
 </head>
@@ -20,37 +20,37 @@
                 <div class="cart" @click="sendThroughWhatsapp()">
                     <div class="flex items-center">
                         <img src="./icons/cart-dark.svg" alt="">
-                        <a href="#">{{ cart.length }} Items - ($0.00)</a>
+                        <a href="#">{{ cart.length }} Productos - ($0.00)</a>
                     </div>
                 </div>
                 <div class="nav-top">
                     <ul>
                         <li>
-                            <a href="#">Home</a>
+                            <a href="#">Inicio</a>
                         </li>
                         <li>
-                            <a href="#">About us</a>
+                            <a href="#">Acerca de Nosotros</a>
                         </li>
                         <li>
-                            <a href="#">Products</a>
+                            <a href="#">Productos</a>
                         </li>
                         <li>
                             <a href="#">Blog</a>
                         </li>
                         <li>
-                            <a href="#">Shop</a>
+                            <a href="#">Pedidos</a>
                         </li>
                         <li>
-                            <a href="#">Services</a>
+                            <a href="#">Servicios Especiales</a>
                         </li>
                         <li>
-                            <a href="#">Contact us</a>
+                            <a href="#">Contáctanos</a>
                         </li>
                         <li>
-                            <a href="#">Log in</a>
+                            <a href="#">Iniciar Sesión</a>
                         </li>
                         <li>
-                            <a href="#">Register</a>
+                            <a href="#">Registrarse</a>
                         </li>
                     </ul>
                 </div>
@@ -570,7 +570,8 @@
         data() {
             return {
                 cart: [],
-                result: 'Yo quiero una '
+                result: 'Yo quiero una ',
+                phone: '+18323128709',
             }
         },
         methods: {
@@ -579,7 +580,7 @@
                 this.result += 'Hamburguesa de Pollo';
             },
             sendThroughWhatsapp: function () {
-                window.open('https://api.whatsapp.com/send?text=' + this.result + '&phone=+18323128709')
+                window.open('https://api.whatsapp.com/send?text=' + this.result + '&phone=' + this.phone)
             }
         }
     });
